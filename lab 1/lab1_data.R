@@ -102,7 +102,7 @@ rug(EPI)
 #Cumulative density function
 plot(ecdf(EPI), do.points=FALSE, verticals=TRUE)
 
-# Quantile-Quantile?
+# Quantile-Quantile
 par(pty="s")
 qqnorm(EPI); qqline(EPI)
 
@@ -110,6 +110,64 @@ qqnorm(EPI); qqline(EPI)
  qqplot(qt(ppoints(250), df = 5),seq(30,95,1), xlab = "Q-Q plot for t dsn")
   qqline(seq(30,95,1))
 
+  plot(ecdf(EPI_data$EPI),do.points=FALSE,verticals = TRUE)
+  plot(ecdf(EPI_data$EPI),do.points=TRUE,verticals = TRUE) # points are visible on the plot.
+  par(pty="s")
+  help("qqnorm") # read the RStudio documentation for qqnorm help("qqplot") # read the RStudio documentation for qqplot qqnorm(EPI_data$EPI)
+  qqline(EPI_data$EPI) # adding the line on the Q-Q plot
+  x <- seq(30,95,1)
+  x
+  x2 <-seq(30,95,2)
+  x2
+  x2 <-seq(30,96,2)
+  x2
+  qqplot(qt(ppoints(250),df=5),x, xlab = "Q-Q plot")
+  qqline(x)
+  
+  
+  plot(ecdf(EPI_data$DALY),do.points=FALSE,verticals = TRUE)
+  plot(ecdf(EPI_data$DALY),do.points=TRUE,verticals = TRUE) # points are visible on the plot.
+  par(pty="s")
+  help("qqnorm") # read the RStudio documentation for qqnorm help("qqplot") # read the RStudio documentation for qqplot qqnorm(EPI_data$EPI)
+  qqline(EPI_data$DALY) # adding the line on the Q-Q plot
+  x <- seq(30,95,1)
+  x
+  x2 <-seq(30,95,2)
+  x2
+  x2 <-seq(30,96,2)
+  x2
+  qqplot(qt(ppoints(250),df=5),x, xlab = "Q-Q plot")
+  qqline(x)
+  
+  plot(ecdf(EPI_data$WATER_H),do.points=FALSE,verticals = TRUE)
+  plot(ecdf(EPI_data$WATER_H),do.points=TRUE,verticals = TRUE) # points are visible on the plot.
+  par(pty="s")
+  help("qqnorm") # read the RStudio documentation for qqnorm help("qqplot") # read the RStudio documentation for qqplot qqnorm(EPI_data$EPI)
+  qqline(EPI_data$WATER_H) # adding the line on the Q-Q plot
+  x <- seq(30,95,1)
+  x
+  x2 <-seq(30,95,2)
+  x2
+  x2 <-seq(30,96,2)
+  x2
+  qqplot(qt(ppoints(250),df=5),x, xlab = "Q-Q plot")
+  qqline(x)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 #box plot
 boxplot(EPI,DALY)
 boxplot(EPI,WATER_H)
